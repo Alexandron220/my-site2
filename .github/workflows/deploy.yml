@@ -1,0 +1,32 @@
+name: Deploy to Yandex Cloud Object Storage
+
+on:
+  push:
+    branches: [ "main" ] # Запускать при пуше в ветку main
+  workflow_dispatch: # Позволяет запускать вручную из вкладки Actions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload to Yandex Cloud Storage
+        uses: yc-actions/yc-obj-storage-upload@v4
+        with:
+          # Секреты, которые мы настроили на шаге 2
+          yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
+          bucket: ${{ secrets.BUCKET }}
+          
+          # Папка в репозитории, которую нужно загрузить.
+          # Если ваш сайт лежит в корне, оставьте "./" или "."
+          # Если сайт в папке "dist" или "public", укажите её.
+          root: ./
+          
+          # (Опционально) Очистить бакет перед загрузкой, чтобы удалить старые файлы.
+          # Будьте осторожны, это удалит всё содержимое бакета!
+          clear: true 
+          
+          # (Опционально) Не загружать файлы, которые не изменились (экономит время).
+          # skip-unchanged: true
