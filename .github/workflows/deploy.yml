@@ -12,14 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload to Yandex Cloud S3
-        uses: yc-actions/yc-s3-upload@v1
+      - name: Upload to Yandex Cloud Storage
+        uses: yc-actions/yc-obj-storage-upload@v4
         with:
-          # Используем статические ключи
-          access-key-id: ${{ secrets.YC_ACCESS_KEY_ID }}
-          secret-access-key: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+          yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
           bucket: ${{ secrets.BUCKET }}
-          # Папка для загрузки (корень репозитория)
-          source-dir: ./
-          # Очищать бакет перед загрузкой (осторожно, удалит всё в бакете!)
+          root: ./
           clear: true
