@@ -15,6 +15,7 @@ jobs:
       - name: Upload to Yandex Cloud Storage
         uses: yc-actions/yc-obj-storage-upload@v4
         with:
+          include: "**/*"
           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
           bucket: ${{ secrets.BUCKET }}
           root: ./
