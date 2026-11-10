@@ -1,0 +1,105 @@
+@font-face{font-family:'yauza';src:url('https://static.tildacdn.pub/tild3837-3165-4330-a538-323832643561/yauza-tygra.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+
+.dg-shop{--dg-bg:#181b14;--dg-card:#232323;--dg-accent:#e2c19c;--dg-red:#9c0d0f;--dg-red-hover:#b40a1b;--dg-text:#f2ece4;--dg-muted:#a99f92;
+  font-family:'TildaSans',Arial,sans-serif;color:var(--dg-text);box-sizing:border-box;padding:72px 0 80px}
+.dg-shop *{box-sizing:border-box}
+.dg-shop--grid{padding:0 0 120px;background:#232323}
+.dg-shop__title{margin:0 0 40px;padding:0 20px;text-align:center;font-family:'yauza',Arial,sans-serif;font-weight:700;
+  font-size:clamp(28px,4vw,48px);line-height:1.15;letter-spacing:.02em;color:var(--dg-accent);text-transform:uppercase}
+
+/* карточка */
+.dg-card{display:flex;flex-direction:column;background:var(--dg-card);border:1px solid rgba(226,193,156,.28);border-radius:10px;overflow:hidden;
+  transition:border-color .2s,transform .2s}
+.dg-card:hover{border-color:var(--dg-accent);transform:translateY(-3px)}
+.dg-card__img{display:block;aspect-ratio:1/1;background:#1b1b1b;position:relative}
+.dg-card__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px}
+.dg-card__body{display:flex;flex-direction:column;gap:10px;padding:18px 20px 22px;flex:1}
+.dg-card__name{margin:0;font-family:'yauza',Arial,sans-serif;font-weight:700;font-size:22px;line-height:1.2;color:var(--dg-accent)}
+.dg-card__name a{color:inherit;text-decoration:none}
+.dg-card__text{margin:0;font-size:14px;line-height:1.45;color:var(--dg-muted)}
+.dg-card__prices{margin-top:auto;padding-top:6px;display:flex;flex-direction:column;gap:4px;font-size:16px;color:var(--dg-text)}
+.dg-card__prices b{font-weight:600}
+.dg-card__prices s{color:var(--dg-muted);margin-left:8px;font-size:14px}
+.dg-card__row{display:flex;justify-content:space-between;gap:12px}
+.dg-card__row span:first-child{color:var(--dg-muted)}
+.dg-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;height:46px;padding:0 24px;border-radius:5px;
+  background:var(--dg-red);color:#fff;font-size:15px;font-weight:600;text-decoration:none;transition:background-color .2s}
+.dg-btn:hover{background:var(--dg-red-hover)}
+
+/* сетка каталога */
+.dg-grid{max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+
+/* слайдер на главной */
+.dg-carousel{position:relative;max-width:1280px;margin:0 auto;padding:0 64px}
+.dg-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding:6px 2px 10px}
+.dg-track::-webkit-scrollbar{display:none}
+.dg-track .dg-card{flex:0 0 calc((100% - 48px) / 3);scroll-snap-align:start}
+.dg-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--dg-accent);
+  background:rgba(24,27,20,.9);color:var(--dg-accent);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;
+  transition:background-color .2s,color .2s,opacity .2s;z-index:2}
+.dg-arrow:hover{background:var(--dg-accent);color:#181b14}
+.dg-arrow:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.dg-arrow[disabled]{opacity:.3;cursor:default;pointer-events:none}
+.dg-arrow--prev{left:8px}
+.dg-arrow--next{right:8px}
+.dg-arrow svg{width:10px;height:18px}
+.dg-noscript{max-width:640px;margin:0 auto;padding:0 20px;text-align:center}
+.dg-noscript a{color:var(--dg-accent)}
+
+@media (max-width:1100px){
+  .dg-track .dg-card{flex-basis:calc((100% - 24px) / 2)}
+}
+@media (max-width:700px){
+  .dg-shop{padding:48px 0 56px}
+  .dg-carousel{padding:0 16px}
+  .dg-track{gap:16px}
+  .dg-track .dg-card{flex-basis:82%}
+  .dg-arrow{width:38px;height:38px;top:34%}
+  .dg-arrow--prev{left:4px}
+  .dg-arrow--next{right:4px}
+  .dg-grid{gap:16px;grid-template-columns:1fr}
+  .dg-card__name{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){.dg-track{scroll-behavior:auto}.dg-card{transition:none}}
+
+/* карточка: фон под фото совпадает с фоном самих фото (#232323) */
+.dg-card__img{background:var(--dg-card)}
+.dg-shop--plain{padding:0 0 30px;background:transparent}
+
+/* колонка покупки на странице товара */
+.dg-buy{font-family:'TildaSans',Arial,sans-serif;color:#f2ece4;max-width:600px;padding:6px 0 20px}
+.dg-buy *{box-sizing:border-box}
+.dg-buy__title{margin:0 0 20px;font-family:'yauza',Arial,sans-serif;font-weight:700;font-size:clamp(26px,2.6vw,40px);line-height:1.18;color:#e2c19c}
+.dg-buy__price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:0 0 20px;font-size:34px;font-weight:600;line-height:1.1;color:#fff}
+.dg-buy__price s{font-size:20px;font-weight:400;color:#a99f92}
+.dg-buy__opts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.dg-buy__opts:empty{display:none}
+.dg-chip{height:44px;padding:0 22px;border-radius:5px;border:1px solid rgba(226,193,156,.6);background:transparent;color:#e2c19c;
+  font:600 16px 'TildaSans',Arial,sans-serif;cursor:pointer;transition:background-color .2s,color .2s}
+.dg-chip:hover{background:rgba(226,193,156,.15)}
+.dg-chip[aria-pressed="true"]{background:#e2c19c;color:#232323;border-color:#e2c19c}
+.dg-chip:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.dg-btn--buy{display:flex;width:100%;height:58px;margin:0 0 30px;font-size:18px}
+.dg-buy__desc{font-size:15px;line-height:1.65;color:#e8e0d4}
+@media (max-width:700px){.dg-buy__price{font-size:28px}.dg-btn--buy{height:54px}}
+
+/* галерея фото на странице товара */
+.dg-gallery{position:relative;padding:0 20px 0 0}
+.dg-gallery__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-radius:12px;background:#181b14}
+.dg-gallery__track::-webkit-scrollbar{display:none}
+.dg-gallery__slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:1/1}
+.dg-gallery__slide img{display:block;width:100%;height:100%;object-fit:contain}
+.dg-gallery__arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#222;
+  display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:opacity .2s,background-color .2s}
+.dg-gallery__arrow:hover{background:#fff}
+.dg-gallery__arrow:focus-visible{outline:2px solid var(--dg-accent,#e2c19c);outline-offset:2px}
+.dg-gallery__arrow[disabled]{opacity:.35;cursor:default;pointer-events:none}
+.dg-gallery__arrow svg{width:8px;height:14px}
+.dg-gallery__arrow--prev{left:14px}
+.dg-gallery__arrow--next{right:34px}
+@media (max-width:980px){.dg-gallery{padding:0}.dg-gallery__arrow--next{right:14px}}
+
+/* переменные цветов нужны и вне блоков .dg-shop (страницы товаров) */
+.dg-buy,.dg-gallery{--dg-red:#9c0d0f;--dg-red-hover:#b40a1b;--dg-accent:#e2c19c}
+.t762__col{vertical-align:top!important}
