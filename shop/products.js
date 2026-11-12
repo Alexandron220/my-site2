@@ -36,7 +36,7 @@ window.DG_PRODUCTS = [
     slug: "kordizeps",
     title: "Кордицепс военный",
     text: "Зерномицелий гриба кордицепса военного 100%. Капсулы по 600 мг",
-    image: "/assets/photos/kordizeps.webp?v=20261113",
+    image: "/assets/photos/kordizeps.webp?v=20261114",
     variants: [{ label: "100 капсул", price: 1200, payUrl: "" }, { label: "150 капсул", price: 1900, payUrl: "" }]
   },
   {
@@ -52,7 +52,7 @@ window.DG_PRODUCTS = [
     slug: "myzhskoy-rezhim",
     title: "Набор «Мужской режим»",
     text: "Набор: кордицепс 100 капсул и красный мухомор 100 капсул",
-    image: "/assets/photos/myzhskoy-rezhim.webp?v=20261113",
+    image: "/assets/photos/myzhskoy-rezhim.webp?v=20261114",
     price: 2000,
     oldPrice: 2600,
     payUrl: ""
@@ -61,7 +61,7 @@ window.DG_PRODUCTS = [
     slug: "liderskyi-nabor",
     title: "Лидерский набор",
     text: "Набор: ежовик, красный мухомор и кордицепс, банки по 100 капсул",
-    image: "/assets/photos/liderskyi-nabor.webp?v=20261113",
+    image: "/assets/photos/liderskyi-nabor.webp?v=20261114",
     price: 3000,
     oldPrice: 4200,
     payUrl: ""
