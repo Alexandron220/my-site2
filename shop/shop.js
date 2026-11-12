@@ -122,14 +122,10 @@
       priceEl.appendChild(el("span", null, money(v.price)));
       if (v.oldPrice) priceEl.appendChild(el("s", null, money(v.oldPrice)));
       var payUrl = v.payUrl || p.payUrl || window.DG_ROBOKASSA_PAY_URL;
-      if (payUrl) {
-        btn.href = payUrl;
-        btn.textContent = "Заказать";
-      } else {
-        btn.href = "mailto:";
-        btn.textContent = "Заказать";
-        btn.removeAttribute("href");
-      }
+      btn.href = payUrl || window.DG_ORDER_URL || "https://vk.ru/artemvladimmak";
+      btn.target = "_blank";
+      btn.rel = "noopener";
+      btn.textContent = "Заказать";
       Array.prototype.forEach.call(optsEl.children, function (c, i) { c.setAttribute("aria-pressed", i === cur ? "true" : "false"); });
     }
     if (p.variants) {
@@ -147,6 +143,20 @@
 /* галерея на странице товара: стрелки */
 (function () {
   Array.prototype.forEach.call(document.querySelectorAll(".dg-gallery"), function (g) {
+    Array.prototype.forEach.call(g.querySelectorAll("img"), function (img, idx) {
+      var orig = img.getAttribute("src") || "";
+      var m = /^https:\/\/static\.tildacdn\.(?:pub|com)\/((?:tild|stor)[\w-]+)\/([^\/?#]+\.(?:png|jpe?g))$/i.exec(orig);
+      if (m) {
+        var small = "https://thb.tildacdn.pub/" + m[1] + "/-/resize/900x/-/format/webp/" + m[2];
+        img.addEventListener("error", function onerr() {
+          img.removeEventListener("error", onerr);
+          if (img.src !== orig) img.src = orig;
+        });
+        img.src = small;
+      }
+      img.decoding = "async";
+      if (idx === 0) { img.loading = "eager"; img.setAttribute("fetchpriority", "high"); } else { img.loading = "lazy"; }
+    });
     var track = g.querySelector(".dg-gallery__track");
     var prev = g.querySelector(".dg-gallery__arrow--prev");
     var next = g.querySelector(".dg-gallery__arrow--next");
