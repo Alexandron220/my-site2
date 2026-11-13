@@ -30,7 +30,7 @@ window.DG_PRODUCTS = [
     title: "Ежовик + Мухомор",
     text: "Ежовик гребенчатый 70% и красный мухомор 30%. Капсулы по 700 мг",
     image: "https://static.tildacdn.pub/tild6339-6534-4330-b837-353534646530/__.png",
-    variants: [{ label: "80 капсул", price: 1300, payUrl: "" }, { label: "120 капсул", price: 2000, payUrl: "" }]
+    variants: [{ label: "100 капсул", price: 1300, payUrl: "" }, { label: "150 капсул", price: 2000, payUrl: "" }]
   },
   {
     slug: "kordizeps",
@@ -51,7 +51,7 @@ window.DG_PRODUCTS = [
   {
     slug: "myzhskoy-rezhim",
     title: "Набор «Мужской режим»",
-    text: "Набор: кордицепс 100 капсул и красный мухомор 100 капсул",
+    text: "Набор: кордицепс 100 капсул и ежовик 100 капсул",
     image: "/assets/photos/card-myzhskoy-rezhim.webp?v=20261118",
     price: 2000,
     oldPrice: 2600,
