@@ -11,8 +11,8 @@
 .dg-card{display:flex;flex-direction:column;background:var(--dg-card);border:1px solid rgba(226,193,156,.28);border-radius:10px;overflow:hidden;
   transition:border-color .2s,transform .2s}
 .dg-card:hover{border-color:var(--dg-accent);transform:translateY(-3px)}
-.dg-card__img{display:block;aspect-ratio:1/1;background:#1b1b1b;position:relative}
-.dg-card__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px}
+.dg-card__img{display:block;aspect-ratio:1/1;background:#232323;position:relative;border-radius:8px;overflow:hidden}
+.dg-card__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0}
 .dg-card__body{display:flex;flex-direction:column;gap:10px;padding:18px 20px 22px;flex:1}
 .dg-card__name{margin:0;font-family:'yauza',Arial,sans-serif;font-weight:700;font-size:22px;line-height:1.2;color:var(--dg-accent)}
 .dg-card__name a{color:inherit;text-decoration:none}
@@ -64,7 +64,7 @@
 @media (prefers-reduced-motion:reduce){.dg-track{scroll-behavior:auto}.dg-card{transition:none}}
 
 /* карточка: фон под фото совпадает с фоном самих фото (#232323) */
-.dg-card__img{background:var(--dg-card)}
+.dg-card__img{background:#232323}
 .dg-shop--plain{padding:0 0 30px;background:transparent}
 
 /* колонка покупки на странице товара */
