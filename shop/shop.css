@@ -105,5 +105,5 @@
 .dg-buy,.dg-gallery{--dg-red:#9c0d0f;--dg-red-hover:#b40a1b;--dg-accent:#e2c19c}
 .t762__col{vertical-align:top!important}
 
-/* на компьютере первое фото помещается на экран целиком */
-@supports (width:1cqw){@media (min-width:981px){.dg-gallery__slide{height:min(100cqw,calc(100vh - 250px));min-height:360px;padding-bottom:0}}}
+/* на компьютере галерея — квадрат, который помещается на экран целиком, по центру колонки */
+@media (min-width:981px){.dg-gallery{max-width:max(360px,calc(100vh - 230px));margin:0 auto}}
