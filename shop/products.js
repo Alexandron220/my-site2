@@ -15,35 +15,35 @@ window.DG_PRODUCTS = [
     slug: "muhomor",
     title: "Мухомор Красный",
     text: "100% молотых шляпок красного мухомора. Капсулы по 400 мг",
-    image: "/assets/photos/card-muhomor.webp?v=20261128",
+    image: "/assets/photos/card-muhomor.webp?v=20261129",
     variants: [{ label: "100 капсул", price: 1300, payUrl: "" }, { label: "150 капсул", price: 2000, payUrl: "" }]
   },
   {
     slug: "ezhovik",
     title: "Ежовик Гребенчатый",
     text: "Зерномицелий гриба ежовика гребенчатого 100%. Капсулы по 600 мг",
-    image: "/assets/photos/card-ezhovik.webp?v=20261128",
+    image: "/assets/photos/card-ezhovik.webp?v=20261129",
     variants: [{ label: "100 капсул", price: 1200, payUrl: "" }, { label: "150 капсул", price: 1900, payUrl: "" }]
   },
   {
     slug: "muhomor-ezhovik",
     title: "Ежовик + Мухомор",
     text: "Ежовик гребенчатый 70% и красный мухомор 30%. Капсулы по 700 мг",
-    image: "/assets/photos/card-muhomor-ezhovik.webp?v=20261128",
+    image: "/assets/photos/card-muhomor-ezhovik.webp?v=20261129",
     variants: [{ label: "100 капсул", price: 1300, payUrl: "" }, { label: "150 капсул", price: 2000, payUrl: "" }]
   },
   {
     slug: "kordizeps",
     title: "Кордицепс военный",
     text: "Зерномицелий гриба кордицепса военного 100%. Капсулы по 600 мг",
-    image: "/assets/photos/card-kordizeps.webp?v=20261128",
+    image: "/assets/photos/card-kordizeps.webp?v=20261129",
     variants: [{ label: "100 капсул", price: 1200, payUrl: "" }, { label: "150 капсул", price: 1900, payUrl: "" }]
   },
   {
     slug: "zhenskyi",
     title: "Набор «Женский щит»",
     text: "Набор: ежовик 150 капсул и красный мухомор 150 капсул",
-    image: "/assets/photos/card-zhenskyi.webp?v=20261128",
+    image: "/assets/photos/card-zhenskyi.webp?v=20261129",
     price: 3750,
     oldPrice: 5000,
     payUrl: ""
@@ -52,7 +52,7 @@ window.DG_PRODUCTS = [
     slug: "myzhskoy-rezhim",
     title: "Набор «Мужской режим»",
     text: "Набор: кордицепс 100 капсул и ежовик 100 капсул",
-    image: "/assets/photos/card-myzhskoy-rezhim.webp?v=20261128",
+    image: "/assets/photos/card-myzhskoy-rezhim.webp?v=20261129",
     price: 2000,
     oldPrice: 2600,
     payUrl: ""
@@ -61,7 +61,7 @@ window.DG_PRODUCTS = [
     slug: "liderskyi-nabor",
     title: "Лидерский набор",
     text: "Набор: ежовик, красный мухомор и кордицепс, банки по 100 капсул",
-    image: "/assets/photos/card-liderskyi-nabor.webp?v=20261128",
+    image: "/assets/photos/card-liderskyi-nabor.webp?v=20261129",
     price: 3000,
     oldPrice: 4200,
     payUrl: ""
